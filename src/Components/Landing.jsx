@@ -23,9 +23,7 @@ const Landing = () => {
             Get The App
             <i className="fa-solid fa-arrow-right fa-sm text-white ml-2"></i>
           </button>
-          <button className='border bg-black rounded-lg py-2 px-4 md:py-3 md:px-6'>
-            Sign In
-          </button>
+         
         </div>
       </nav>
 

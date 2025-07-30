@@ -46,9 +46,7 @@ const Navbar = () => {
           <button onClick={() => nav("/help")} className="hover:text-orange-500 cursor-pointer">
             <i className="fa-solid fa-question"></i>&nbsp;Help
           </button>
-          <button className="hover:text-orange-500 cursor-pointer">
-            <i className="fa-solid fa-user"></i>&nbsp;Sign In
-          </button>
+         
           <button
             onClick={() => nav("/cart")}
             onMouseLeave={() => {

@@ -4,7 +4,7 @@ import { lazy, Suspense, useEffect, useState } from "react"
 import { useGlobalContext } from "./Utils/GlobalContext"
 import Navbar from "./Components/Navbar"
 import Skeleton from "./Components/Skeleton"
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import Cart from "./Components/Cart"
 import Help from "./Components/Help"
 import Login from "./Components/Login"
@@ -19,27 +19,20 @@ const Error = lazy(()=>import('./Components/Error'))
 const App = () => {
   const { setLat, setLong } = useGlobalContext()
 
-  // 👇 Auth ko state me rakho
+  // ✅ Auth state
   const [isAuthenticated, setIsAuthenticated] = useState(
     localStorage.getItem("isAuthenticated") === "true"
   )
 
-  // jab bhi login/logout ho, state update karo
+  // ✅ Location fetch
   useEffect(() => {
-    const handleStorageChange = () => {
-      setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true")
-    }
-    window.addEventListener("storage", handleStorageChange)
-    return () => window.removeEventListener("storage", handleStorageChange)
-  }, [])
-
-  // Location fetch
-  navigator.geolocation.getCurrentPosition((position) => {
-    const lat = position.coords?.latitude
-    const long = position.coords?.longitude
-    setLat(lat)
-    setLong(long)
-  })
+    navigator.geolocation.getCurrentPosition((position) => {
+      const lat = position.coords?.latitude
+      const long = position.coords?.longitude
+      setLat(lat)
+      setLong(long)
+    })
+  }, [setLat, setLong])
 
   return (
     <div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const Login = () => {
+const Login = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,8 +14,9 @@ const Login = () => {
 
     if (savedUser && savedUser.username === username && savedUser.password === password) {
       localStorage.setItem("isAuthenticated", "true");
+      setIsAuthenticated(true);   // ✅ state update
       toast.success("Login successful!");
-      navigate("/home");
+      navigate("/home");          // ✅ redirect
     } else {
       toast.error("Invalid username or password");
     }

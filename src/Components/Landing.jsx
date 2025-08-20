@@ -35,14 +35,14 @@ const Landing = () => {
         </h1>
 
         {/* Search Bar */}
-        <div className='h-12 w-full max-w-[600px] relative'>
+        {/* <div className='h-12 w-full max-w-[600px] relative'>
           <input
             className='bg-white h-full w-full rounded px-4 outline-none text-sm md:text-base'
             type="text"
             placeholder='Search for restaurant, items or more'
           />
           <i className="fa-solid fa-magnifying-glass absolute top-3.5 right-5 text-gray-500"></i>
-        </div>
+        </div> */}
 
         {/* Service Images */}
         <div className='flex flex-wrap justify-center gap-4 mt-4'>

@@ -48,9 +48,8 @@ const Genie = () => {
   }
 
   const calculateEstimatedPrice = () => {
-    // Simple distance-based pricing (mock calculation)
     const basePrice = 50
-    const distanceMultiplier = Math.floor(Math.random() * 30) + 10 // Mock distance calculation
+    const distanceMultiplier = Math.floor(Math.random() * 30) + 10
     return basePrice + distanceMultiplier
   }
 
@@ -60,12 +59,10 @@ const Genie = () => {
       return
     }
 
-    // Mock booking confirmation
     alert(`Genie booked successfully! 
 Estimated Price: ₹${estimatedPrice}
 Your delivery partner will contact you soon.`)
     
-    // Reset form
     setPickupAddress('')
     setDropAddress('')
     setItemDescription('')
@@ -199,6 +196,9 @@ Your delivery partner will contact you soon.`)
                 onChange={(e) => setItemDescription(e.target.value)}
                 placeholder="Describe your item (e.g., Documents, Lunch box, etc.)"
                 className='w-full p-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 outline-none'
+                data-gramm="false"
+                data-gramm_editor="false"
+                data-enable-grammarly="false"
               />
             </div>
 
@@ -210,6 +210,9 @@ Your delivery partner will contact you soon.`)
                 onChange={(e) => setPickupAddress(e.target.value)}
                 placeholder="Enter complete pickup address with landmarks"
                 className='w-full p-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 outline-none h-20 resize-none'
+                data-gramm="false"
+                data-gramm_editor="false"
+                data-enable-grammarly="false"
               />
             </div>
 
@@ -221,6 +224,9 @@ Your delivery partner will contact you soon.`)
                 onChange={(e) => setDropAddress(e.target.value)}
                 placeholder="Enter complete drop address with landmarks"
                 className='w-full p-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 outline-none h-20 resize-none'
+                data-gramm="false"
+                data-gramm_editor="false"
+                data-enable-grammarly="false"
               />
             </div>
 

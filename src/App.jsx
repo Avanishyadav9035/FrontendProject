@@ -9,6 +9,10 @@ import Skeleton from "./Components/Skeleton"
 import toast, { Toaster } from "react-hot-toast"
 import Cart from "./Components/Cart"
 import Help from "./Components/Help"
+import Offers from "./Components/Offers"
+import SwiggyCorporate from "./Components/SwiggyCorporate"
+import Instamart from "./Components/Instamart"
+import Genie from "./Components/Genie"
 // import SliderItemData from "./Components/SliderItemData"
 // import Menu from "./Components/Menu"
 // import Search from "./Components/Search"
@@ -36,6 +40,9 @@ const App = () => {
         <Route element={<Landing />} path="/" />
         <Route element={<Landing />} path="/home" />
 
+        <Route element={<Offers/>} path="/offers"/>
+        <Route element={<SwiggyCorporate/>} path="/swiggycorporate"/>
+  
         <Route
           element={
             <Suspense
@@ -52,6 +59,19 @@ const App = () => {
           path="/restaurants"
         />
 
+        <Route element={
+          <Suspense fallback={
+            <>
+            <Navbar/>
+            <Skeleton/>
+            </>
+          }>
+            <Instamart/>
+          </Suspense>
+        } 
+        path="/instamart"
+        />
+        <Route element={<Genie/>} path="/genie"/>
         <Route element={<Menu />} path="/menu/:resId" />
         <Route element={<Cart />} path="/cart" />
         <Route element={<Help />} path="/help" />
@@ -74,6 +94,8 @@ const App = () => {
 
         <Route element={<SliderItemData />} path="/slider-data/:itemId/:text" />
         <Route path="*" element={<Error />} />
+
+        
       </Routes>
     </div>
   )

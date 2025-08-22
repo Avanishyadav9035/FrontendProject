@@ -17,8 +17,20 @@ const Landing = () => {
       <nav className='flex flex-wrap justify-between items-center p-4 md:p-6'>
         <img className='h-10 md:h-12' src={logoImg} alt="Logo" />
         <div className='flex flex-wrap items-center gap-3 md:gap-4 text-white text-sm md:text-base mt-4 md:mt-0'>
-          <p className='whitespace-nowrap'>Swiggy Corporate</p>
-          <p className='whitespace-nowrap'>Partner with us</p>
+          <p 
+         className="whitespace-nowrap cursor-pointer text-gray-1100 hover:text-gray-700 active:text-orange-700 transition-colors duration-300 font-medium"
+          onClick={() => navigate('/swiggycorporate')}
+       >
+       Swiggy Corporate
+      </p>
+
+      <p 
+      className="whitespace-nowrap cursor-pointer text-gray-1100 hover:text-gray-700 active:text-orange-700 transition-colors duration-300 font-medium"
+      onClick={() => navigate('/offers')}
+       >
+     Offers
+     </p>
+
           <button className='border border-white rounded-lg py-2 px-4 md:py-3 md:px-6'>
             Get The App
             <i className="fa-solid fa-arrow-right fa-sm text-white ml-2"></i>
@@ -36,7 +48,9 @@ const Landing = () => {
 
         {/* Search Bar */}
         {/* <div className='h-12 w-full max-w-[600px] relative'>
-          <input
+          <input onClick={()=>{
+            navigate('/search')
+          }}
             className='bg-white h-full w-full rounded px-4 outline-none text-sm md:text-base'
             type="text"
             placeholder='Search for restaurant, items or more'
@@ -59,7 +73,7 @@ const Landing = () => {
             alt=""
           />
           <img
-            onClick={() => navigate('/dineout')}
+            onClick={() => navigate('/offers')}
             className='h-40 md:h-60 cursor-pointer transition-transform hover:scale-105'
             src={three}
             alt=""

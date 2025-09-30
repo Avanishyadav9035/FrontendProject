@@ -26,7 +26,9 @@ Includes a **chatbot** for personalized dish suggestions and FAQs.
 ( Screenshots of home page, restaurant listing, chatbot, and cart here)
  
 ---Home Page Image
+  ![1](https://github.com/user-attachments/assets/0125550d-5dd9-4f35-87e1-503aca2262b8)
 
+ ![2](https://github.com/user-attachments/assets/737a4734-7a65-4830-ab7b-78e56e8be011)
 
 
 ## 🔗 Live Demo

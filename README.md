@@ -1,12 +1,42 @@
-# React + Vite
+![1](https://github.com/user-attachments/assets/53006883-c0d6-433c-9663-434bec6a9643)# 🍔 Swiggy Clone with Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Swiggy-like food delivery platform** built using ReactJS, Redux, Tailwind CSS, and JavaScript.  
+Includes a **chatbot** for personalized dish suggestions and FAQs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 📱 Fully responsive UI
+- 🍴 Browse restaurants & menus
+- 🛒 Add/remove items from cart
+- 🔍 Real-time search functionality
+- 🤖 Chatbot integration for FAQs & dish recommendations
+- 🗂️ State management using Redux
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** ReactJS, Tailwind CSS  
+- **State Management:** Redux  
+- **Other:** Chatbot API, REST APIs  
+
+---
+
+## 📸 Screenshots
+( Screenshots of home page, restaurant listing, chatbot, and cart here)
+ 
+---Home Page Image
+
+
+
+## 🔗 Live Demo
+[👉 Click Here](https://frontend-project-eta-ten.vercel.app/)
+
+---
+
+## ⚙️ Installation
+```bash
+git clone https://github.com/your-username/swiggy-clone.git
+cd swiggy-clone
+npm install
+npm start
